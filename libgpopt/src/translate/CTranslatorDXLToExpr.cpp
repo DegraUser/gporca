@@ -126,6 +126,7 @@ CTranslatorDXLToExpr::~CTranslatorDXLToExpr()
 //		Initialize index of scalar translators
 //
 //---------------------------------------------------------------------------
+// dxl 装欢为CExpr
 void
 CTranslatorDXLToExpr::InitTranslators()
 {
@@ -440,6 +441,7 @@ CTranslatorDXLToExpr::PexprLogical(const CDXLNode *dxlnode)
 	CDXLOperator *dxl_op = dxlnode->GetOperator();
 
 	ULONG ulOpId = (ULONG) dxl_op->GetDXLOperator();
+    // real translate to cexpr
 	PfPexpr pf = m_rgpfTranslators[ulOpId];
 
 	if (NULL == pf)
