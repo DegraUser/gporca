@@ -155,7 +155,7 @@ CJobGroupOptimization::Init(
 			   rgwszStates, rgwszEvents
 #endif	// GPOS_DEBUG
 	);
-
+    // 每个cjob的派生类种会注册用于处理特定sm的函数，会在合适的时机调用。
 	// set job actions
 	m_jsm.SetAction(estInitialized, EevtStartOptimization);
 	m_jsm.SetAction(estOptimizingChildren, EevtOptimizeChildren);
