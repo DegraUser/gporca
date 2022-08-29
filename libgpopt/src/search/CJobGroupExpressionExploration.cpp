@@ -25,6 +25,7 @@
 
 using namespace gpopt;
 
+// State transition diagram for 搜索这个关键字可以得到job 状态转移图
 // State transition diagram for group expression exploration job state machine;
 //
 // +-----------------------+   eevExploringChildren

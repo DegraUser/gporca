@@ -34,7 +34,7 @@
 using namespace gpos;
 using namespace gpdbcost;
 
-
+// 代价模型，所有物理算子的代价计算方法
 // initialization of cost functions
 const CCostModelGPDB::SCostMapping CCostModelGPDB::m_rgcm[] = {
 	{COperator::EopPhysicalTableScan, CostScan},

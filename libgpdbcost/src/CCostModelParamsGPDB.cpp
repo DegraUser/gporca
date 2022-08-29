@@ -16,6 +16,7 @@
 
 using namespace gpopt;
 
+// 代价参数，所有代价模型的具体代价参数
 // sequential i/o bandwidth
 const CDouble CCostModelParamsGPDB::DSeqIOBandwidthVal = 1024.0;
 
