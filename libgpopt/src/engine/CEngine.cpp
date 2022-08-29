@@ -1709,7 +1709,7 @@ CEngine::Optimize()
 		// schedule main optimization job
 		ScheduleMainJob(&sc, poc);
 
-		// run optimization job
+		// run optimization job 驱动job执行
 		CScheduler::Run(&sc);
 
 		poc->Release();
