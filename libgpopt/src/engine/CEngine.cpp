@@ -1687,7 +1687,10 @@ CEngine::Optimize()
 				 (ULONG)(m_pmemo->UlpGroups() * GPOPT_JOBS_PER_GROUP));
 	CJobFactory jf(m_mp, ulJobs);
 	CScheduler sched(m_mp, ulJobs);
-
+    {
+        CAutoTrace at(m_mp);
+        at.Os() << "CEngine::Optimize  job count " << ulJobs;
+    }
 	CSchedulerContext sc;
 	sc.Init(m_mp, &jf, &sched, this);
 
