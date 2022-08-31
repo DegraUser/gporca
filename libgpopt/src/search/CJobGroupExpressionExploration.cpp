@@ -287,7 +287,7 @@ CJobGroupExpressionExploration::EevtExploreSelf(CSchedulerContext *psc,
 //
 //---------------------------------------------------------------------------
 CJobGroupExpressionExploration::EEvent
-CJobGroupExpressionExploration::EevtFinalize(CSchedulerContext *,  //psc
+CJobGroupExpressionExploration::EevtFinalize(CSchedulerContext * psc,  //psc
 											 CJob *pjOwner)
 {
     {

@@ -319,7 +319,7 @@ CJobGroupOptimization::EevtOptimizeChildren(CSchedulerContext *psc,
 //
 //---------------------------------------------------------------------------
 CJobGroupOptimization::EEvent
-CJobGroupOptimization::EevtCompleteOptimization(CSchedulerContext *,  // psc
+CJobGroupOptimization::EevtCompleteOptimization(CSchedulerContext * psc,  // psc
 												CJob *pjOwner)
 {
     {

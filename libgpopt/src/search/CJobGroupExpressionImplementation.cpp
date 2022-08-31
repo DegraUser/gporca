@@ -288,7 +288,7 @@ CJobGroupExpressionImplementation::EevtImplementSelf(CSchedulerContext *psc,
 //
 //---------------------------------------------------------------------------
 CJobGroupExpressionImplementation::EEvent
-CJobGroupExpressionImplementation::EevtFinalize(CSchedulerContext *,  //psc
+CJobGroupExpressionImplementation::EevtFinalize(CSchedulerContext * psc,  //psc
 												CJob *pjOwner)
 {
     {

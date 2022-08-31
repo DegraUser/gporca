@@ -693,7 +693,7 @@ CJobGroupExpressionOptimization::EevtOptimizeSelf(CSchedulerContext *psc,
 //
 //---------------------------------------------------------------------------
 CJobGroupExpressionOptimization::EEvent
-CJobGroupExpressionOptimization::EevtFinalize(CSchedulerContext *,	// psc
+CJobGroupExpressionOptimization::EevtFinalize(CSchedulerContext * psc,	// psc
 											  CJob *pjOwner)
 {
     {
