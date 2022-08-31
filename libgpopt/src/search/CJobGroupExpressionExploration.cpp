@@ -227,7 +227,7 @@ CJobGroupExpressionExploration::EevtExploreChildren(CSchedulerContext *psc,
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << "MYTEST CJobGroupExpressionExploration::EevtExploreChildren";
+            at.Os() << pthread_self() << "MYTEST CJobGroupExpressionExploration::EevtExploreChildren";
         }
     }
 	// get a job pointer
@@ -261,7 +261,7 @@ CJobGroupExpressionExploration::EevtExploreSelf(CSchedulerContext *psc,
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << "MYTEST CJobGroupExpressionExploration::EevtExploreSelf";
+            at.Os() << pthread_self() << "MYTEST CJobGroupExpressionExploration::EevtExploreSelf";
         }
     }
 	// get a job pointer
@@ -293,7 +293,7 @@ CJobGroupExpressionExploration::EevtFinalize(CSchedulerContext * psc,  //psc
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << "MYTEST CJobGroupExpressionExploration::EevtFinalize";
+            at.Os() << pthread_self() << "MYTEST CJobGroupExpressionExploration::EevtFinalize";
         }
     }
 	// get a job pointer

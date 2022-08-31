@@ -325,7 +325,7 @@ CJobGroupOptimization::EevtCompleteOptimization(CSchedulerContext * psc,  // psc
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << "CJobGroupOptimization::EevtCompleteOptimization";
+            at.Os() << pthread_self() << "MYTEST CJobGroupOptimization::EevtCompleteOptimization";
         }
     }
 	// get a job pointer

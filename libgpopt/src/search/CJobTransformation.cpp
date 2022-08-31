@@ -128,7 +128,7 @@ CJobTransformation::EevtTransform(CSchedulerContext *psc, CJob *pjOwner)
 {
     {
         CAutoTrace at(psc->GetGlobalMemoryPool());
-        at.Os() << "MYTEST CJobTransformation::EevtTransform";
+        at.Os() << pthread_self() << "MYTEST CJobTransformation::EevtTransform";
     }
 	// get a job pointer
 	CJobTransformation *pjt = PjConvert(pjOwner);

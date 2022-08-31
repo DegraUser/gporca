@@ -321,7 +321,7 @@ CJobGroupExpressionOptimization::EevtInitialize(CSchedulerContext *psc,
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << "MYTEST CJobGroupExpressionOptimization::EevtInitialize";
+            at.Os() << pthread_self() << "MYTEST CJobGroupExpressionOptimization::EevtInitialize";
         }
     }
 	// get a job pointer
@@ -369,7 +369,7 @@ CJobGroupExpressionOptimization::DerivePrevChildProps(CSchedulerContext *psc)
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << "MYTEST CJobGroupExpressionOptimization::DerivePrevChildProps";
+            at.Os() << pthread_self() << "MYTEST CJobGroupExpressionOptimization::DerivePrevChildProps";
         }
     }
 	ULONG ulPrevChildIndex =
@@ -589,7 +589,7 @@ CJobGroupExpressionOptimization::EevtAddEnforcers(CSchedulerContext *psc,
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << "MYTEST CJobGroupExpressionOptimization::EevtAddEnforcers";
+            at.Os() << pthread_self() << "MYTEST CJobGroupExpressionOptimization::EevtAddEnforcers";
         }
     }
 	// get a job pointer
@@ -637,7 +637,7 @@ CJobGroupExpressionOptimization::EevtOptimizeSelf(CSchedulerContext *psc,
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << "MYTEST CJobGroupExpressionOptimization::EevtOptimizeSelf";
+            at.Os() << pthread_self() << "MYTEST CJobGroupExpressionOptimization::EevtOptimizeSelf";
         }
     }
 	// get a job pointer
@@ -699,7 +699,7 @@ CJobGroupExpressionOptimization::EevtFinalize(CSchedulerContext * psc,	// psc
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << "MYTEST CJobGroupExpressionOptimization::EevtFinalize";
+            at.Os() << pthread_self() << "MYTEST CJobGroupExpressionOptimization::EevtFinalize";
         }
     }
 	// get a job pointer
