@@ -190,7 +190,7 @@ CJobGroupExploration::EevtStartExploration(CSchedulerContext * psc,	 //psc
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << pthread_self() << "MYTEST CJobTransformation::EevtTransform";
+            at.Os() << pthread_self() << "MYTEST CJobGroupExploration::EevtStartExploration";
         }
     }
 	// get a job pointer
