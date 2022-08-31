@@ -224,7 +224,7 @@ CJobGroupExpressionImplementation::EevtImplementChildren(CSchedulerContext *psc,
 														 CJob *pjOwner)
 {
     {
-        if (psc != null) {
+        if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
             at.Os() << "MYTEST CJobGroupExpressionImplementation::EevtImplementChildren";
         }
@@ -260,7 +260,7 @@ CJobGroupExpressionImplementation::EevtImplementSelf(CSchedulerContext *psc,
 													 CJob *pjOwner)
 {
     {
-        if (psc != null) {
+        if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
             at.Os() << "MYTEST CJobGroupExpressionImplementation::EevtImplementSelf";
         }
@@ -292,7 +292,7 @@ CJobGroupExpressionImplementation::EevtFinalize(CSchedulerContext *,  //psc
 												CJob *pjOwner)
 {
     {
-        if (psc != null) {
+        if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
             at.Os() << "MYTEST CJobGroupExpressionImplementation::EevtFinalize";
         }

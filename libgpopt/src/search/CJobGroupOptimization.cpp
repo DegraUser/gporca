@@ -242,7 +242,7 @@ CJobGroupOptimization::EevtStartOptimization(CSchedulerContext *psc,
 											 CJob *pjOwner)
 {
     {
-        if (psc != null) {
+        if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
             at.Os() << "CJobGroupOptimization::EevtStartOptimization";
         }
@@ -291,7 +291,7 @@ CJobGroupOptimization::EevtOptimizeChildren(CSchedulerContext *psc,
 											CJob *pjOwner)
 {
     {
-        if (psc != null) {
+        if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
             at.Os() << "CJobGroupOptimization::EevtOptimizeChildren";
         }
@@ -323,7 +323,7 @@ CJobGroupOptimization::EevtCompleteOptimization(CSchedulerContext *,  // psc
 												CJob *pjOwner)
 {
     {
-        if (psc != null) {
+        if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
             at.Os() << "CJobGroupOptimization::EevtCompleteOptimization";
         }

@@ -188,7 +188,7 @@ CJobGroupExploration::EevtStartExploration(CSchedulerContext * psc,	 //psc
 										   CJob *pjOwner)
 {
     {
-        if (psc != null) {
+        if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
             at.Os() << "MYTEST CJobTransformation::EevtTransform";
         }
@@ -219,7 +219,7 @@ CJobGroupExploration::EEvent
 CJobGroupExploration::EevtExploreChildren(CSchedulerContext *psc, CJob *pjOwner)
 {
     {
-        if (psc != null) {
+        if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
             at.Os() << "MYTEST CJobGroupExploration::EevtExploreChildren";
         }
