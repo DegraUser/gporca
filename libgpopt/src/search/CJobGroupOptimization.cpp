@@ -244,7 +244,7 @@ CJobGroupOptimization::EevtStartOptimization(CSchedulerContext *psc,
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << "CJobGroupOptimization::EevtStartOptimization";
+            at.Os() << pthread_self() << "MYTEST CJobGroupOptimization::EevtStartOptimization";
         }
     }
 	// get a job pointer
@@ -293,7 +293,7 @@ CJobGroupOptimization::EevtOptimizeChildren(CSchedulerContext *psc,
     {
         if (psc != NULL) {
             CAutoTrace at(psc->GetGlobalMemoryPool());
-            at.Os() << "CJobGroupOptimization::EevtOptimizeChildren";
+            at.Os() << pthread_self() << "MYTEST CJobGroupOptimization::EevtOptimizeChildren";
         }
     }
 	// get a job pointer
