@@ -13,7 +13,7 @@
 
 #include "gpos/base.h"
 #include "gpos/common/CList.h"
-#define GPOS_DEBUG
+// #define GPOS_DEBUG
 
 namespace gpopt
 {
