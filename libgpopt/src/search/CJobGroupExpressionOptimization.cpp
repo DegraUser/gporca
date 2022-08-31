@@ -318,6 +318,12 @@ CJobGroupExpressionOptimization::EEvent
 CJobGroupExpressionOptimization::EevtInitialize(CSchedulerContext *psc,
 												CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobGroupExpressionOptimization::EevtInitialize";
+        }
+    }
 	// get a job pointer
 	CJobGroupExpressionOptimization *pjgeo = PjConvert(pjOwner);
 
@@ -360,6 +366,12 @@ CJobGroupExpressionOptimization::EevtInitialize(CSchedulerContext *psc,
 void
 CJobGroupExpressionOptimization::DerivePrevChildProps(CSchedulerContext *psc)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobGroupExpressionOptimization::DerivePrevChildProps";
+        }
+    }
 	ULONG ulPrevChildIndex =
 		m_pexprhdlPlan->UlPreviousOptimizedChildIndex(m_ulChildIndex);
 
@@ -574,6 +586,12 @@ CJobGroupExpressionOptimization::EEvent
 CJobGroupExpressionOptimization::EevtAddEnforcers(CSchedulerContext *psc,
 												  CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobGroupExpressionOptimization::EevtAddEnforcers";
+        }
+    }
 	// get a job pointer
 	CJobGroupExpressionOptimization *pjgeo = PjConvert(pjOwner);
 
@@ -616,6 +634,12 @@ CJobGroupExpressionOptimization::EEvent
 CJobGroupExpressionOptimization::EevtOptimizeSelf(CSchedulerContext *psc,
 												  CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobGroupExpressionOptimization::EevtOptimizeSelf";
+        }
+    }
 	// get a job pointer
 	CJobGroupExpressionOptimization *pjgeo = PjConvert(pjOwner);
 
@@ -672,6 +696,12 @@ CJobGroupExpressionOptimization::EEvent
 CJobGroupExpressionOptimization::EevtFinalize(CSchedulerContext *,	// psc
 											  CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobGroupExpressionOptimization::EevtFinalize";
+        }
+    }
 	// get a job pointer
 	CJobGroupExpressionOptimization *pjgeo = PjConvert(pjOwner);
 	GPOS_ASSERT(!pjgeo->m_fChildOptimizationFailed);

@@ -224,6 +224,12 @@ CJobGroupExpressionExploration::EEvent
 CJobGroupExpressionExploration::EevtExploreChildren(CSchedulerContext *psc,
 													CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobGroupExpressionExploration::EevtExploreChildren";
+        }
+    }
 	// get a job pointer
 	CJobGroupExpressionExploration *pjgee = PjConvert(pjOwner);
 	if (!pjgee->FChildrenScheduled())
@@ -252,6 +258,12 @@ CJobGroupExpressionExploration::EEvent
 CJobGroupExpressionExploration::EevtExploreSelf(CSchedulerContext *psc,
 												CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobGroupExpressionExploration::EevtExploreSelf";
+        }
+    }
 	// get a job pointer
 	CJobGroupExpressionExploration *pjgee = PjConvert(pjOwner);
 	if (!pjgee->FXformsScheduled())
@@ -278,6 +290,12 @@ CJobGroupExpressionExploration::EEvent
 CJobGroupExpressionExploration::EevtFinalize(CSchedulerContext *,  //psc
 											 CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobGroupExpressionExploration::EevtFinalize";
+        }
+    }
 	// get a job pointer
 	CJobGroupExpressionExploration *pjgee = PjConvert(pjOwner);
 	pjgee->m_pgexpr->SetState(CGroupExpression::estExplored);

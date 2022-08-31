@@ -192,6 +192,12 @@ CJobGroupImplementation::EEvent
 CJobGroupImplementation::EevtStartImplementation(CSchedulerContext *psc,
 												 CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobGroupImplementation::EevtStartImplementation";
+        }
+    }
 	// get a job pointer
 	CJobGroupImplementation *pjgi = PjConvert(pjOwner);
 	CGroup *pgroup = pjgi->m_pgroup;
@@ -234,6 +240,12 @@ CJobGroupImplementation::EEvent
 CJobGroupImplementation::EevtImplementChildren(CSchedulerContext *psc,
 											   CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobGroupImplementation::EevtImplementChildren";
+        }
+    }
 	// get a job pointer
 	CJobGroupImplementation *pjgi = PjConvert(pjOwner);
 	if (pjgi->FScheduleGroupExpressions(psc))

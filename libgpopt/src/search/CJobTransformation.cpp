@@ -126,6 +126,10 @@ CJobTransformation::Init(CGroupExpression *pgexpr, CXform *pxform)
 CJobTransformation::EEvent
 CJobTransformation::EevtTransform(CSchedulerContext *psc, CJob *pjOwner)
 {
+    {
+        CAutoTrace at(psc->GetGlobalMemoryPool());
+        at.Os() << "MYTEST CJobTransformation::EevtTransform";
+    }
 	// get a job pointer
 	CJobTransformation *pjt = PjConvert(pjOwner);
 	CMemoryPool *pmpGlobal = psc->GetGlobalMemoryPool();

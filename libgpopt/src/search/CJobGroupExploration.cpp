@@ -184,9 +184,15 @@ CJobGroupExploration::FScheduleGroupExpressions(CSchedulerContext *psc)
 //
 //---------------------------------------------------------------------------
 CJobGroupExploration::EEvent
-CJobGroupExploration::EevtStartExploration(CSchedulerContext *,	 //psc
+CJobGroupExploration::EevtStartExploration(CSchedulerContext * psc,	 //psc
 										   CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobTransformation::EevtTransform";
+        }
+    }
 	// get a job pointer
 	CJobGroupExploration *pjge = PjConvert(pjOwner);
 	CGroup *pgroup = pjge->m_pgroup;
@@ -212,6 +218,12 @@ CJobGroupExploration::EevtStartExploration(CSchedulerContext *,	 //psc
 CJobGroupExploration::EEvent
 CJobGroupExploration::EevtExploreChildren(CSchedulerContext *psc, CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "MYTEST CJobGroupExploration::EevtExploreChildren";
+        }
+    }
 	// get a job pointer
 	CJobGroupExploration *pjge = PjConvert(pjOwner);
 	if (pjge->FScheduleGroupExpressions(psc))

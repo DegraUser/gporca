@@ -241,6 +241,12 @@ CJobGroupOptimization::EEvent
 CJobGroupOptimization::EevtStartOptimization(CSchedulerContext *psc,
 											 CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "CJobGroupOptimization::EevtStartOptimization";
+        }
+    }
 	// get a job pointer
 	CJobGroupOptimization *pjgo = PjConvert(pjOwner);
 	CGroup *pgroup = pjgo->m_pgroup;
@@ -284,6 +290,12 @@ CJobGroupOptimization::EEvent
 CJobGroupOptimization::EevtOptimizeChildren(CSchedulerContext *psc,
 											CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "CJobGroupOptimization::EevtOptimizeChildren";
+        }
+    }
 	// get a job pointer
 	CJobGroupOptimization *pjgo = PjConvert(pjOwner);
 
@@ -310,6 +322,12 @@ CJobGroupOptimization::EEvent
 CJobGroupOptimization::EevtCompleteOptimization(CSchedulerContext *,  // psc
 												CJob *pjOwner)
 {
+    {
+        if (psc != null) {
+            CAutoTrace at(psc->GetGlobalMemoryPool());
+            at.Os() << "CJobGroupOptimization::EevtCompleteOptimization";
+        }
+    }
 	// get a job pointer
 	CJobGroupOptimization *pjgo = PjConvert(pjOwner);
 
