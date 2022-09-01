@@ -1693,6 +1693,9 @@ CEngine::Optimize()
     }
 	CSchedulerContext sc;
 	sc.Init(m_mp, &jf, &sched, this);
+    if (m_pmemo != NULL) {
+        m_pmemo->showHashTable();
+    }
 
 	const ULONG ulSearchStages = m_search_stage_array->Size();
 	for (ULONG ul = 0; !FSearchTerminated() && ul < ulSearchStages; ul++)

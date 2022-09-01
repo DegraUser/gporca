@@ -445,6 +445,29 @@ CMemo::MarkDuplicates(CGroup *pgroupFst, CGroup *pgroupSnd)
 	pgroupSnd->ResolveDuplicateMaster();
 }
 
+void
+CMemo::showHashTable() {
+    ShtIter shtit(m_sht);
+    CGroupExpression *pgexpr = NULL;
+    while (NULL != pgexpr || shtit.Advance())
+    {
+        {
+            ShtAccIter shtitacc(shtit);
+            pgexpr = shtitacc.Value();
+            {
+                if (psc != NULL) {
+                    CAutoTrace at(psc->GetGlobalMemoryPool());
+                    at.Os() << pthread_self() << "MYTEST CJobGroupExpressionImplementation::EevtFinalize";
+                    at.Os() << pthread_self() << " show memo hash table [IN]";
+                    pgexpr->OsPrint(at.Os());
+                    at.Os() << pthread_self() << " show memo hash table [out]";
+                }
+            }
+        }
+        GPOS_CHECK_ABORT;
+    }
+}
+
 
 //---------------------------------------------------------------------------
 //	@function:

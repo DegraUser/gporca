@@ -81,6 +81,9 @@ private:
 	CSyncHashtable<CGroupExpression,  // entry
 				   CGroupExpression>
 		m_sht;
+public:
+    void showHashTable();
+private:
 
 	// add new group
 	void Add(CGroup *pgroup, CExpression *pexprOrigin);
