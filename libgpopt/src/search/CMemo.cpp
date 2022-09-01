@@ -456,7 +456,7 @@ CMemo::showHashTable() {
             pgexpr = shtitacc.Value();
             {
                 if (psc != NULL) {
-                    CAutoTrace at(psc->GetGlobalMemoryPool());
+                    CAutoTrace at(m_mp);
                     at.Os() << pthread_self() << "MYTEST CJobGroupExpressionImplementation::EevtFinalize";
                     at.Os() << pthread_self() << " show memo hash table [IN]";
                     pgexpr->OsPrint(at.Os());
