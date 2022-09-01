@@ -462,6 +462,7 @@ CMemo::showHashTable() {
                     pgexpr->OsPrint(at.Os());
                     at.Os() << pthread_self() << " show memo hash table [out]";
                 }
+                pgexpr = NULL;
             }
         }
         GPOS_CHECK_ABORT;
@@ -511,7 +512,6 @@ CMemo::FRehash()
 			{
 				shtitacc.Remove(pgexpr);
 				listGExprs.Append(pgexpr);
-                pgexpr = NULL;
 			}
 		}
 		GPOS_CHECK_ABORT;
