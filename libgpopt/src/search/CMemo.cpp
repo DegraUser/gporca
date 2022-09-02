@@ -450,7 +450,6 @@ CMemo::showHashTable() {
 #if 1
     CAutoTrace at(m_mp);
     at.Os() << pthread_self() << " MYTEST show memo [IN]";
-    pgexpr->OsPrint(at.Os());
     this->OsPrint(at.Os());
     at.Os() << pthread_self() << " MYTEST show memo [out]";
 #else
