@@ -1728,7 +1728,9 @@ CEngine::Optimize()
 
 		FinalizeSearchStage();
 	}
-
+    if (m_pmemo != NULL) {
+        m_pmemo->showHashTable();
+    }
 
 	if (GPOS_FTRACE(EopttracePrintOptimizationStatistics))
 	{
