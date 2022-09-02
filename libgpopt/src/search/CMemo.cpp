@@ -447,6 +447,13 @@ CMemo::MarkDuplicates(CGroup *pgroupFst, CGroup *pgroupSnd)
 
 void
 CMemo::showHashTable() {
+#if 1
+    CAutoTrace at(m_mp);
+    at.Os() << pthread_self() << " MYTEST show memo [IN]";
+    pgexpr->OsPrint(at.Os());
+    this->OsPrint(at.Os());
+    at.Os() << pthread_self() << " MYTEST show memo [out]";
+#else
     ShtIter shtit(m_sht);
     CGroupExpression *pgexpr = NULL;
     while (NULL != pgexpr || shtit.Advance())
@@ -457,16 +464,17 @@ CMemo::showHashTable() {
             {
                 if (m_mp != NULL) {
                     CAutoTrace at(m_mp);
-                    at.Os() << pthread_self() << "MYTEST CJobGroupExpressionImplementation::EevtFinalize";
-                    at.Os() << pthread_self() << " show memo hash table [IN]";
+                    at.Os() << pthread_self() << " show memo [IN]";
                     pgexpr->OsPrint(at.Os());
-                    at.Os() << pthread_self() << " show memo hash table [out]";
+                    this->OsPrint(at.Os());
+                    at.Os() << pthread_self() << " show memo [out]";
                 }
                 pgexpr = NULL;
             }
         }
         GPOS_CHECK_ABORT;
     }
+#endif
 }
 
 
