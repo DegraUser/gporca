@@ -251,6 +251,14 @@ CJobGroupImplementation::EevtImplementChildren(CSchedulerContext *psc,
 	if (pjgi->FScheduleGroupExpressions(psc))
 	{
 		// implementation is in progress
+        {
+            if (psc != NULL) {
+                CAutoTrace at(psc->GetGlobalMemoryPool());
+                at.Os() << "MYTEST after CJobGroupImplementation IN";
+                psc->Peng()->ShowMemo();
+                at.Os() << "MYTEST after CJobGroupImplementation OUT";
+            }
+        }
 		return eevImplementing;
 	}
 	else
@@ -266,6 +274,14 @@ CJobGroupImplementation::EevtImplementChildren(CSchedulerContext *psc,
 		{
 			psc->Peng()->FinalizeImplementation();
 		}
+        {
+            if (psc != NULL) {
+                CAutoTrace at(psc->GetGlobalMemoryPool());
+                at.Os() << "MYTEST after CJobGroupImplementation IN";
+                psc->Peng()->ShowMemo();
+                at.Os() << "MYTEST after CJobGroupImplementation OUT";
+            }
+        }
 
 		return eevImplemented;
 	}

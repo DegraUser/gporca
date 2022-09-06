@@ -44,6 +44,8 @@ class CEnumeratorConfig;
 //---------------------------------------------------------------------------
 class CEngine
 {
+public:
+    void ShowMemo();
 private:
 	// memory pool
 	CMemoryPool *m_mp;

@@ -93,6 +93,11 @@ CEngine::CEngine(CMemoryPool *mp)
 	m_pdrgpulpXformResults = GPOS_NEW(mp) UlongPtrArray(mp);
 }
 
+void CEngine::ShowMemo() {
+    if (m_pmemo != NULL) {
+        m_pmemo->showHashTable();
+    }
+}
 
 //---------------------------------------------------------------------------
 //	@function:
